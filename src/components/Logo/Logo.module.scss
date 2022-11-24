@@ -1,0 +1,22 @@
+.img{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: auto;
+  height: 50px;
+}
+.title{
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  color: #000000;
+}
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+  padding: 30px;
+}

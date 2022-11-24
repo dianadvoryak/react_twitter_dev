@@ -1,0 +1,35 @@
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  align-items: center;
+  background-color: #EBF0FF;
+  float: left;
+  height: 100vh;
+  border-right: 5px solid #C4CEEF;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  align-items: center;
+  padding: 30px;
+}
+.link_wrapper{
+  padding: 10px;
+  list-style-type: none;
+}
+.link{
+  padding: 10px;
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  text-decoration: none;
+}
+.active{
+  background: #ABB7E3;
+  border-radius: 20px;
+}
