@@ -8,3 +8,16 @@
   display: flex;
   justify-content: space-between;
 }
+.remove{
+  cursor: pointer;
+}
+.img{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.wrapper_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

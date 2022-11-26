@@ -22,14 +22,6 @@ export const postsApi = createApi({
       }),
       invalidatesTags: [{type: 'Posts', id: 'LIST'}]
     }),
-    updatePost: build.mutation({
-      query: ({ id, ...patch }) => ({
-        url: `posts/${id}`,
-        method: 'PATCH',
-        body: patch,
-      }),
-      invalidatesTags: [{type: 'Posts', id: 'LIST'}]
-    }),
     deletePosts: build.mutation({
       query: (id) => ({
         url: `posts/${id}`,
@@ -40,4 +32,4 @@ export const postsApi = createApi({
   })
 })
 
-export const {useGetPostsQuery, useAddPostsMutation, useUpdatePostMutation, useDeletePostsMutation} = postsApi
+export const {useGetPostsQuery, useAddPostsMutation, useDeletePostsMutation} = postsApi
