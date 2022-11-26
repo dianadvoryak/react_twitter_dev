@@ -3,12 +3,13 @@ import classes from './UserProfile.module.scss'
 import background from '../../assets/background.jpg'
 import avatar from '../../assets/avatar.jpg'
 import { Container } from '../../components/Container/Container'
-import { MyTweets } from '../../components/MyTweets/MyTweets'
-import { LikedTweets } from '../../components/LikedTweets/LikedTweets';
+import { MyTwittes } from '../../components/MyTwittes/MyTwittes'
+import { LikedTwittes } from '../../components/LikedTwittes/LikedTwittes';
 
 export const UserProfile = () => {
   const [tab, setTab] = useState(true);
-  const setActive = (tab === true) ? classes.link  + ' ' + classes.active : classes.link
+  const setActiveRigth = (tab === true) ? classes.link  + ' ' + classes.active : classes.link
+  const setActiveLeft = (tab === false) ? classes.link  + ' ' + classes.active : classes.link
   
   return (
     <Container>
@@ -21,21 +22,21 @@ export const UserProfile = () => {
         <div className={classes.tabs}>
         <div 
           onClick={() => setTab(true)} 
-          className={setActive}
+          className={setActiveRigth}
         >
-          my tweets
+          my twittes
         </div>
         <div 
           onClick={() => setTab(false)}
-          className={setActive}
+          className={setActiveLeft}
         >
-          liked tweets
+          liked twittes
           </div>
       </div>
       {
         tab ? 
-        <MyTweets /> :
-        <LikedTweets />
+        <MyTwittes /> :
+        <LikedTwittes />
       }
       </div>
 

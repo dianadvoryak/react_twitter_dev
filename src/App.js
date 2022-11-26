@@ -5,13 +5,12 @@ import { Search } from './layouts/Search';
 import { News } from './layouts/News';
 import { Sidebar } from './layouts/Sidebar';
 import { Route, Routes } from 'react-router-dom';
-import { LikedTweets } from './components/LikedTweets/LikedTweets';
-import { MyTweets } from './components/MyTweets/MyTweets';
+import { UserContext } from './context/UserContext';
 
 function App() {
 
   return (
-    <div>
+    <UserContext>
       <Sidebar />
 
       <Routes>
@@ -20,7 +19,7 @@ function App() {
           <Route path="news" element={<News />} />
           {/* <Route path="*" element={<Notfoundpage />} /> */}
       </Routes>
-    </div>
+    </UserContext>
   );
 }
 
