@@ -4,6 +4,7 @@ import { ItemTwitter } from '../ItemTwitter/ItemTwitter';
 import { useUserProfileContext } from '../../context/UserContext';
 import classes from './MyTwittes.module.scss'
 import { useObserver } from '../../hooks/useObserver';
+import { Input } from '../Input/Input';
 
 export const MyTwittes = () => {
   const [posts, setPosts] = useState(1)
@@ -18,6 +19,7 @@ export const MyTwittes = () => {
 
   return (
     <div>
+      <Input />
       {
         data
         .filter(item => item.userId == UserProfile)

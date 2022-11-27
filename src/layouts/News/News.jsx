@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Container } from '../../components/Container/Container'
 import classes from './News.module.scss'
 import { useUserProfileContext } from '../../context/UserContext';
