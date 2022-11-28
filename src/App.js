@@ -6,6 +6,7 @@ import { News } from './layouts/News/News';
 import { Sidebar } from './layouts/Sidebar';
 import { Route, Routes } from 'react-router-dom';
 import { UserContext } from './context/UserContext';
+import Proba from './Proba';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="news" element={<News />} />
           {/* <Route path="*" element={<Notfoundpage />} /> */}
       </Routes>
+      {/* <Proba /> */}
     </UserContext>
   );
 }

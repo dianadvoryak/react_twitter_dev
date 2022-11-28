@@ -17,8 +17,8 @@ export const Input = () => {
     await addPost({
       "name": "Leanne Graham",
       "userId": 1,
-      "id": Math.floor(Math.random() * 4),
       "body": inputValue,
+      "url": "https://via.placeholder.com/600/92c952",
       "likes": 0,
     }).unwrap();
     setInputValue('');
@@ -28,7 +28,7 @@ export const Input = () => {
     <Container>
       <div className={classes.wrapper}>
         <div className={classes.border}>
-          <textarea 
+          <input 
             value={inputValue}
             onChange={validInput}
             className={classes.input} 
@@ -51,7 +51,6 @@ export const Input = () => {
               </div>
             </>
           }
-          
         </div>
         {
           isLoading && <h1>Sending...</h1>

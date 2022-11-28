@@ -3,17 +3,14 @@ import { useGetPostsQuery } from '../../redux'
 import { ItemTwitter } from '../ItemTwitter/ItemTwitter';
 import { useUserProfileContext } from '../../context/UserContext';
 import classes from './MyTwittes.module.scss'
-import { useObserver } from '../../hooks/useObserver';
 import { Input } from '../Input/Input';
 
 export const MyTwittes = () => {
-  const [posts, setPosts] = useState(1)
+  const [posts, setPosts] = useState('')
   const {data = [], isLoading} = useGetPostsQuery(posts)
+  const {newData = []} = useGetPostsQuery(posts)
   const UserProfile = useUserProfileContext()
   const lastElement = useRef()
-  
-  useObserver(lastElement, isLoading, () => setPosts(prev => prev+1))
-  
 
   if(isLoading) return <h1 className={classes.loading}>Loading...</h1>
 
@@ -21,8 +18,9 @@ export const MyTwittes = () => {
     <div>
       <Input />
       {
-        data
-        .filter(item => item.userId == UserProfile)
+        [...data]
+        .reverse()
+        .filter(item => item.userId === UserProfile)
         .map(item => (
           <ItemTwitter key={item.id}>
             {item}

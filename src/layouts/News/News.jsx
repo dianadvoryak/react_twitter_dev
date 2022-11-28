@@ -11,11 +11,9 @@ export const News = () => {
   const {data = [], isLoading} = useGetPostsQuery(posts)
   const UserProfile = useUserProfileContext()
   const lastElement = useRef()
+  const [totalCount, setTotalCount] = useState(0)
   
-
   useObserver(lastElement, isLoading, () => setPosts(prev => prev+1))
-
-  
 
   if(isLoading) return <h1 className={classes.loading}>Loading...</h1>
 
