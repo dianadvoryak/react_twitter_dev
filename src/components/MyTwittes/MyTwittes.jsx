@@ -6,9 +6,7 @@ import classes from './MyTwittes.module.scss'
 import { Input } from '../Input/Input';
 
 export const MyTwittes = () => {
-  const [posts, setPosts] = useState('')
-  const {data = [], isLoading} = useGetPostsQuery(posts)
-  const {newData = []} = useGetPostsQuery(posts)
+  const {data = [], isLoading} = useGetPostsQuery('')
   const UserProfile = useUserProfileContext()
   const lastElement = useRef()
 
