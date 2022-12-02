@@ -15,7 +15,7 @@ export const Menu = () => {
         <ul>
           <li className={classes.link_wrapper}>
             <NavLink
-              to="/"
+              to="/react_twitter_dev"
               end="true"
               className={setActive}
             >

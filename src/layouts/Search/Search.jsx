@@ -37,14 +37,11 @@ export const Search = () => {
           ? 
             data
               .filter(data => {
-                const fullUser = (data.name + data.body).toLowerCase();``
+                const fullUser = (data.name + data.body).toLowerCase();
                 return (fullUser.includes(searchValue.toLowerCase()))
               })
-              .map(data => <ItemTwitter>{data}</ItemTwitter>)
+              .map(data => <ItemTwitter key={data.id}>{data}</ItemTwitter>)
           : <h1 className={classes.title}>Search something!</h1>
-        }
-        {
-          searchValue && found === 0 && console.log(data.length)
         }
         <div ref={lastElement} style={{height:5, background:'#C4CEEF'}}/>
       </div>

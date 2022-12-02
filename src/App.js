@@ -14,7 +14,7 @@ function App() {
       <Sidebar />
 
       <Routes>
-          <Route path="/" end element={<UserProfile />} />
+          <Route path="/react_twitter_dev" end element={<UserProfile />} />
           <Route path="search" element={<Search />} />
           <Route path="news" element={<News />} />
       </Routes>
